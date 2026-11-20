@@ -130,6 +130,8 @@ img { max-width: 100%; display: block; }
   padding: .55rem 1.2rem; font-weight: 600; box-shadow: 0 4px 0 var(--ink);
 }
 .date-pill .dot { color: var(--bamboo); }
+.date-text { display: inline-flex; align-items: center; gap: .4rem; }
+.cal-icon { width: 1.2em; height: 1.2em; color: var(--bamboo-dark); flex: none; }
 
 /* bamboo */
 .bamboo { position: absolute; bottom: 0; display: flex; gap: 14px; z-index: 2; pointer-events: none; }
@@ -258,6 +260,7 @@ main { position: relative; z-index: 2; }
   font-size: 1.9rem; background: var(--leaf); border-radius: 50%;
   border: 3px solid var(--ink); margin-top: -3.4rem; margin-bottom: .2rem;
 }
+.detail-cal-icon { width: 34px; height: 34px; stroke: var(--ink); }
 .map-wrap {
   margin-top: 2.5rem; border: 3px solid var(--ink); border-radius: var(--radius);
   overflow: hidden; box-shadow: 0 6px 0 var(--ink); background: #ddd;
