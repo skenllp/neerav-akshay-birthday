@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rider Panda Birthday Bash 🐼🛵 | December 5, 2026</title>
+  <meta name="description" content="You're invited! Join our little Rider Panda's birthday on December 5, 2026 at Coconut Groves Convention Centre, Kanjiramattom." />
+  <meta property="og:title" content="Rider Panda Birthday Bash 🐼🛵" />
+  <meta property="og:description" content="December 5, 2026 · Coconut Groves Convention Centre, Kanjiramattom" />
+  <meta property="og:image" content="images/photo6.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Background music (drop your music.mp3 next to this file) ===== -->
+  <audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+
+  <!-- ===== Splash / tap to start (also unlocks music on mobile) ===== -->
+  <div id="splash" class="splash">
+    <div class="splash-inner">
+      <div class="splash-panda" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <circle cx="28" cy="30" r="16" fill="#1e1e1e"/>
+          <circle cx="92" cy="30" r="16" fill="#1e1e1e"/>
+          <circle cx="60" cy="64" r="44" fill="#fff" stroke="#1e1e1e" stroke-width="3"/>
+          <ellipse cx="42" cy="60" rx="11" ry="14" fill="#1e1e1e" transform="rotate(-20 42 60)"/>
+          <ellipse cx="78" cy="60" rx="11" ry="14" fill="#1e1e1e" transform="rotate(20 78 60)"/>
+          <circle cx="44" cy="58" r="4" fill="#fff"/><circle cx="76" cy="58" r="4" fill="#fff"/>
+          <ellipse cx="60" cy="78" rx="7" ry="5" fill="#1e1e1e"/>
+          <path d="M52 86 Q60 93 68 86" stroke="#1e1e1e" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <circle cx="32" cy="80" r="6" fill="#ffb3c1" opacity=".8"/><circle cx="88" cy="80" r="6" fill="#ffb3c1" opacity=".8"/>
+        </svg>
+      </div>
+      <p class="splash-kicker">You've got a special invite!</p>
+      <h1 class="splash-title">Rider Panda<br/>Birthday Bash</h1>
+      <button id="startBtn" class="btn btn-primary btn-big">
+        <span>🛵</span> Start the Ride
+      </button>
+      <p class="splash-hint">Tap to open · sound on 🔊</p>
+    </div>
+  </div>
+
+  <!-- ===== Floating music control ===== -->
+  <button id="musicBtn" class="music-btn" aria-label="Play or pause music" title="Play / pause music">
+    <span class="disc">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#1e1e1e"/>
+        <circle cx="20" cy="20" r="13" fill="none" stroke="#444" stroke-width="1"/>
+        <circle cx="20" cy="20" r="9" fill="none" stroke="#444" stroke-width="1"/>
+        <circle cx="20" cy="20" r="6" fill="#7cc576"/>
+        <circle cx="20" cy="20" r="1.8" fill="#1e1e1e"/>
+      </svg>
+    </span>
+    <span class="music-label">Music</span>
+  </button>
+  <div id="musicToast" class="toast" role="status"></div>
+
+  <!-- ===== Falling bamboo leaves ===== -->
+  <div class="leaves" aria-hidden="true"></div>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="bamboo bamboo-left" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="bamboo bamboo-right" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <div class="hero-text">
+      <p class="kicker">🐾 Vroom vroom! You're invited 🐾</p>
+      <h1 class="title">
+        <span class="name" data-config="babyName">Our Little Rider</span>
+        <span class="turning">is turning <b data-config="age">1</b>!</span>
+      </h1>
+      <p class="subtitle">Join us for a <strong>Rider Panda</strong> birthday adventure</p>
+      <div class="date-pill">
+        <span>📅 Saturday, December 5, 2026</span>
+        <span class="dot">•</span>
+        <span>⏰ <span data-config="time">11:00 AM</span></span>
+      </div>
+    </div>
+
+    <!-- Rider panda on a scooter -->
+    <div class="road-scene" aria-hidden="true">
+      <div class="speed-lines"><i></i><i></i><i></i></div>
+      <svg class="rider" viewBox="0 0 320 260">
+        <!-- shadow -->
+        <ellipse class="shadow" cx="160" cy="238" rx="118" ry="7" fill="rgba(0,0,0,.15)"/>
+
+        <!-- scarf (behind) -->
+        <path class="scarf" d="M128 120 C 100 112, 80 128, 52 116 C 66 130, 92 134, 128 130 Z" fill="#e8474c"/>
+
+        <!-- rear body of scooter -->
+        <path d="M44 196 C 44 160, 80 150, 120 158 L 130 196 Z" fill="#f7b733"/>
+        <path d="M58 168 C 70 158, 96 156, 116 160" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" opacity=".7"/>
+
+        <!-- seat -->
+        <rect x="92" y="150" width="68" height="14" rx="7" fill="#2d2d2d"/>
+
+        <!-- deck -->
+        <rect x="100" y="182" width="140" height="16" rx="8" fill="#f7b733"/>
+
+        <!-- front column -->
+        <path d="M228 190 L 252 100" stroke="#f7b733" stroke-width="16" stroke-linecap="round"/>
+        <!-- headlight -->
+        <circle cx="258" cy="112" r="8" fill="#fff6c9" stroke="#2d2d2d" stroke-width="3"/>
+        <!-- handlebar -->
+        <path d="M240 94 L 266 98" stroke="#2d2d2d" stroke-width="7" stroke-linecap="round"/>
+
+        <!-- panda legs -->
+        <ellipse cx="160" cy="176" rx="16" ry="11" fill="#1e1e1e"/>
+        <ellipse cx="186" cy="180" rx="13" ry="9" fill="#1e1e1e"/>
+
+        <!-- panda body -->
+        <ellipse cx="148" cy="140" rx="34" ry="32" fill="#fff" stroke="#1e1e1e" stroke-width="3"/>
+        <!-- tiny jersey number -->
+        <circle cx="150" cy="146" r="11" fill="#e8474c"/>
+        <text x="150" y="151" font-family="Fredoka, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" data-config-svg="age">1</text>
+
+        <!-- arm reaching to handlebar -->
+        <path d="M166 124 Q 210 104 242 98" stroke="#1e1e1e" stroke-width="15" stroke-linecap="round" fill="none"/>
+
+        <!-- head group -->
+        <g class="head">
+          <!-- ears -->
+          <circle cx="120" cy="52" r="13" fill="#1e1e1e"/>
+          <circle cx="178" cy="52" r="13" fill="#1e1e1e"/>
+          <!-- head -->
+          <circle cx="149" cy="82" r="37" fill="#fff" stroke="#1e1e1e" stroke-width="3"/>
+          <!-- helmet -->
+          <path d="M112 76 A 37 37 0 0 1 186 76 L 190 80 L 108 80 Z" fill="#4aa3df" stroke="#1e1e1e" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M149 46 L 149 76" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+          <!-- goggles on helmet -->
+          <rect x="118" y="58" width="62" height="6" rx="3" fill="#2d2d2d"/>
+          <circle cx="136" cy="61" r="8" fill="#bfe6ff" stroke="#2d2d2d" stroke-width="3"/>
+          <circle cx="162" cy="61" r="8" fill="#bfe6ff" stroke="#2d2d2d" stroke-width="3"/>
+          <!-- eye patches -->
+          <ellipse cx="136" cy="90" rx="9" ry="11" fill="#1e1e1e" transform="rotate(-18 136 90)"/>
+          <ellipse cx="164" cy="90" rx="9" ry="11" fill="#1e1e1e" transform="rotate(18 164 90)"/>
+          <circle class="eye" cx="137" cy="88" r="3.4" fill="#fff"/>
+          <circle class="eye" cx="163" cy="88" r="3.4" fill="#fff"/>
+          <!-- nose & smile -->
+          <ellipse cx="150" cy="103" rx="6" ry="4.2" fill="#1e1e1e"/>
+          <path d="M143 109 Q 150 116 157 109" stroke="#1e1e1e" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+          <!-- cheeks -->
+          <circle cx="124" cy="104" r="5.5" fill="#ffb3c1" opacity=".85"/>
+          <circle cx="176" cy="104" r="5.5" fill="#ffb3c1" opacity=".85"/>
+        </g>
+
+        <!-- wheels -->
+        <g class="wheel" style="transform-origin:80px 206px">
+          <circle cx="80" cy="206" r="28" fill="#1e1e1e"/>
+          <circle cx="80" cy="206" r="14" fill="#e9e9e9"/>
+          <path d="M80 192 V220 M66 206 H94" stroke="#9a9a9a" stroke-width="3"/>
+        </g>
+        <g class="wheel" style="transform-origin:240px 206px">
+          <circle cx="240" cy="206" r="28" fill="#1e1e1e"/>
+          <circle cx="240" cy="206" r="14" fill="#e9e9e9"/>
+          <path d="M240 192 V220 M226 206 H254" stroke="#9a9a9a" stroke-width="3"/>
+        </g>
+      </svg>
+      <div class="road"><span></span></div>
+    </div>
+
+    <a href="#countdown" class="scroll-cue" aria-label="Scroll down">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </header>
+
+  <main>
+    <!-- ===== COUNTDOWN ===== -->
+    <section id="countdown" class="section countdown-section reveal">
+      <h2 class="section-title"><span class="paw">🐾</span> Countdown to the Party <span class="paw">🐾</span></h2>
+      <p class="section-sub">Our little panda is revving up!</p>
+      <div class="countdown" id="countdownBox">
+        <div class="cd-item"><span class="cd-num" id="cdDays">00</span><span class="cd-label">Days</span></div>
+        <div class="cd-item"><span class="cd-num" id="cdHours">00</span><span class="cd-label">Hours</span></div>
+        <div class="cd-item"><span class="cd-num" id="cdMins">00</span><span class="cd-label">Minutes</span></div>
+        <div class="cd-item"><span class="cd-num" id="cdSecs">00</span><span class="cd-label">Seconds</span></div>
+      </div>
+      <p class="party-now hidden" id="partyNow">🎉 It's party time! 🎉</p>
+
+      <!-- progress road -->
+      <div class="progress-road" aria-hidden="true">
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="mini-panda" id="miniPanda">🐼</div>
+        <div class="finish">🎂</div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section id="gallery" class="section gallery-section reveal">
+      <h2 class="section-title">Meet the Little Rider</h2>
+      <p class="section-sub">Snuggly moments from the very first ride 🎋</p>
+      <div class="gallery">
+        <figure class="polaroid" data-index="0"><img src="images/photo6.jpg" alt="Baby in a brown bear bonnet with a knitted bunny" loading="lazy"/><figcaption>Cuddle buddy 🐻</figcaption></figure>
+        <figure class="polaroid" data-index="1"><img src="images/photo1.jpg" alt="Baby sleeping in a bumblebee outfit" loading="lazy"/><figcaption>Busy little bee 🐝</figcaption></figure>
+        <figure class="polaroid" data-index="2"><img src="images/photo2.jpg" alt="Baby hugging a red knitted heart" loading="lazy"/><figcaption>All heart ❤️</figcaption></figure>
+        <figure class="polaroid" data-index="3"><img src="images/photo3.jpg" alt="Baby in a red Santa hat" loading="lazy"/><figcaption>Holiday cutie 🎅</figcaption></figure>
+        <figure class="polaroid" data-index="4"><img src="images/photo5.jpg" alt="Swaddled baby on a tiny mint bed with blue flowers" loading="lazy"/><figcaption>Sweet dreams 💤</figcaption></figure>
+        <figure class="polaroid" data-index="5"><img src="images/photo4.jpg" alt="Baby sleeping in navy blue shorts" loading="lazy"/><figcaption>Nap champion 💙</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ===== EVENT DETAILS ===== -->
+    <section id="details" class="section details-section reveal">
+      <h2 class="section-title">Party Pit-Stop Details</h2>
+      <p class="section-sub">Park your rides here! 🛵</p>
+
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="detail-icon">📅</div>
+          <h3>When</h3>
+          <p><strong>Saturday</strong><br/>December 5, 2026</p>
+          <p class="muted">⏰ <span data-config="time">11:00 AM</span> onwards</p>
+          <button class="btn btn-ghost" id="calBtn">➕ Add to Calendar</button>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">📍</div>
+          <h3>Where</h3>
+          <p><strong>Coconut Groves Convention Centre</strong></p>
+          <p class="muted">Millungal – Gamma Jct Rd, Kanjiramattom,<br/>Kerala 682315</p>
+          <a class="btn btn-primary" href="https://maps.app.goo.gl/ohfbbwuBJB6Yi3AD7" target="_blank" rel="noopener">🧭 Get Directions</a>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">🎋</div>
+          <h3>Theme</h3>
+          <p><strong>Rider Panda</strong></p>
+          <p class="muted">Come dressed in black &amp; white — panda ears and helmets welcome! 🐼</p>
+          <button class="btn btn-ghost" id="shareBtn">💬 Share Invite</button>
+        </div>
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          title="Venue map – Coconut Groves Convention Centre"
+          src="https://maps.google.com/maps?q=Coconut%20Groves%20Convention%20Centre%2C%20Kanjiramattom%2C%20Kerala%20682315&z=15&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="paw-trail" aria-hidden="true">
+      <span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span>
+    </div>
+    <h2 class="footer-title">See you at the party!</h2>
+    <p>Your presence is the best gift for our little rider 💛</p>
+    <p class="parents-line">With love from <span data-config="mother">Chandhana Bhaiju</span> &amp; <span data-config="father">Akshay Shibu</span> — proud parents of <span data-config="babyName">Neerav C Akshay</span> 💛</p>
+    <p class="muted small">With love, <span data-config="hosts">Chandhana Bhaiju &amp; Akshay Shibu</span></p>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <img id="lbImg" src="" alt="" />
+    <button class="lb-next" aria-label="Next">›</button>
+    <p id="lbCap" class="lb-cap"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
