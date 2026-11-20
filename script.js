@@ -5,13 +5,13 @@
 const CONFIG = {
   babyName: "Neerav C Akshay",       // child's name
   age: "1",                           // birthday number
-  time: "11:00 AM",                   // party start time (shown on page)
+  time: "6:30 PM – 9:30 PM",          // party time (shown on page)
   mother: "Chandhana Bhaiju",         // mother's name
   father: "Akshay Shibu",             // father's name
   hosts: "Chandhana Bhaiju & Akshay Shibu", // footer sign-off
   // Party start in India time (used by countdown + calendar). Keep the +05:30.
-  partyStart: "2026-12-05T11:00:00+05:30",
-  partyEnd:   "2026-12-05T15:00:00+05:30",
+  partyStart: "2026-12-05T18:30:00+05:30",
+  partyEnd:   "2026-12-05T21:30:00+05:30",
   venueName: "Coconut Groves Convention Centre",
   venueAddress: "Millungal - Gamma Jct Rd, Kanjiramattom, Kerala 682315",
   mapsLink: "https://maps.app.goo.gl/ohfbbwuBJB6Yi3AD7",
