@@ -69,6 +69,7 @@ img { max-width: 100%; display: block; }
   font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1.15;
   margin: .4rem 0 1.6rem; color: var(--ink);
 }
+.splash-name { color: var(--bamboo-dark); font-size: .78em; }
 .splash-hint { margin-top: 1rem; color: var(--muted); font-size: .9rem; }
 
 /* ---------- Music button ---------- */
